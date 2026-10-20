@@ -1,0 +1,8 @@
+services:
+  api:
+    build: .
+    environment:
+      MODEL_PATH: /app/artifacts/asset_risk_model.joblib
+      LLM_PROVIDER: disabled
+    ports: ["8000:8000"]
+    volumes: ["./artifacts:/app/artifacts:ro"]
